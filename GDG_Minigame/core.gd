@@ -1,9 +1,8 @@
-extends Node2D
+extends Area2D
+@export var rigid: Resource
 
 func _ready():
-	for i in range(0,4):
-		print(i)
-		spawn_projectile(i)
+	pass
 
 func _process(delta):
 	pass
@@ -11,12 +10,19 @@ func _process(delta):
 #q = quadrant, expects 0 <= int <= 3
 func spawn_projectile(q):
 	#should calculate a position and direction
-	var r = $Area2D/CollisionShape2D.shape.radius + 25
-	var theta = 90*q + 45
-	print(theta)
-	var x = r * cos(theta*PI/180)
-	var y = r * sin(theta*PI/180)
-	var colorRect = ColorRect.new()
-	colorRect.size = Vector2(25,25)
-	colorRect.position = Vector2(x,y)
-	add_child(colorRect)
+	var r = $CollisionShape2D.shape.radius + 25
+	# (90*q + 45)*PI
+	var theta = randf_range(0,360)*PI
+	var x = r * cos(theta/180)
+	var y = r * sin(theta/180)
+	var rigidBody = rigid.instantiate()
+	rigidBody.set_global_transform(Transform2D(theta,Vector2(x,y)))
+	add_child(rigidBody)
+	rigidBody.apply_central_impulse(Vector2(x,y))
+
+func _on_timer_timeout():
+	spawn_projectile(randi_range(0,3))
+	#$Timer.wait_time = randf_range(1.5,2.5)
+
+func _on_perimeter_area_shape_exited(area_rid, area, area_shape_index, local_shape_index):
+	print(area)

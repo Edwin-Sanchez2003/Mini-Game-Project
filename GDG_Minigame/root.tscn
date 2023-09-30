@@ -9,8 +9,8 @@ script = ExtResource("1_uu12i")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="core" parent="." instance=ExtResource("2_yhfov")]
+[node name="Core" parent="." instance=ExtResource("2_yhfov")]
 position = Vector2(960, 540)
 
-[node name="perimeter" parent="." instance=ExtResource("3_k3cni")]
+[node name="Perimeter" parent="." instance=ExtResource("3_k3cni")]
 position = Vector2(960, 540)

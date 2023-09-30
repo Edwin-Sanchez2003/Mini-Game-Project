@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwlk2cyu2h2fc"]
+[gd_scene load_steps=4 format=3 uid="uid://dwlk2cyu2h2fc"]
 
 [ext_resource type="Script" path="res://core.gd" id="1_4gchr"]
+[ext_resource type="PackedScene" uid="uid://cn7sii5gp54fx" path="res://rigid_body_2d.tscn" id="2_1qiew"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hq1ty"]
 radius = 155.0
 
-[node name="core" type="Node2D"]
+[node name="Core" type="Area2D"]
 script = ExtResource("1_4gchr")
+rigid = ExtResource("2_1qiew")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_hq1ty")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
