@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1eh8alcl63v3"]
+
+[ext_resource type="Script" path="res://prefabs/projectile.gd" id="1_hn2ws"]
+[ext_resource type="Texture2D" uid="uid://cuxcmjxi2p72q" path="res://assets/images/dot.png" id="2_xt6il"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c26di"]
+radius = 32.0
+
+[node name="Projectile" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_hn2ws")
+collider_path = NodePath("CollisionShape2D")
+sprite_path = NodePath("Sprite2D")
+timer_path = NodePath("Timer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c26di")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xt6il")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
