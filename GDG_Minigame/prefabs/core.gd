@@ -1,13 +1,6 @@
 extends Area2D
 @onready var projectile_pf = preload("res://prefabs/projectile.tscn")
 
-func _ready():
-	pass
-
-func _process(delta):
-	pass
-
-
 func spawn_projectile():
 	var projectile = projectile_pf.instantiate()
 	add_child(projectile)

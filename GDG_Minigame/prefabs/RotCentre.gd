@@ -17,7 +17,7 @@ func _process(delta):
 			rotation += delta * speed
 	else:
 		if(Input.is_action_just_pressed("left") || Input.is_action_just_pressed("right")):
-			if(fmod(rotation, 2 * PI) > PI/2.0 && fmod(rotation, 2 * PI) < 3 * PI / 2.0):
+			if($Player.global_position.y > Globals.res.y/2):
 				topHemisphere = false
 			else:
 				topHemisphere = true

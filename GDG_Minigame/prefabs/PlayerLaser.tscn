@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://4tbos6iml3nw"]
+
+[ext_resource type="Texture2D" uid="uid://nff7hlpawluf" path="res://assets/images/LaserTex.png" id="1_2cyka"]
+[ext_resource type="Script" path="res://prefabs/PlayerLaser.gd" id="2_kmnt2"]
+
+[node name="PlayerLaser" type="Sprite2D"]
+texture = ExtResource("1_2cyka")
+flip_v = true
+script = ExtResource("2_kmnt2")

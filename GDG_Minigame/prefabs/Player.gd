@@ -1,6 +1,6 @@
 extends Sprite2D
 
-const PlayerLaser = preload("res://PlayerLaser.tscn")
+const PlayerLaser = preload("res://prefabs/PlayerLaser.tscn")
 const laserWidth = 200
 const depletionRate = 100
 

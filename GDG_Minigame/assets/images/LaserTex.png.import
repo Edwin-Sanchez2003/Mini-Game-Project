@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vk3y7bmj7ew8"
-path="res://.godot/imported/PlayerIcarus.png-81b453d98870aef3960fe3906e317e7d.ctex"
+uid="uid://nff7hlpawluf"
+path="res://.godot/imported/LaserTex.png-6a70d9eb2e1c6dcbf2454660fe7402de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/PlayerIcarus.png"
-dest_files=["res://.godot/imported/PlayerIcarus.png-81b453d98870aef3960fe3906e317e7d.ctex"]
+source_file="res://assets/images/LaserTex.png"
+dest_files=["res://.godot/imported/LaserTex.png-6a70d9eb2e1c6dcbf2454660fe7402de.ctex"]
 
 [params]
 
