@@ -15,7 +15,7 @@ extends RigidBody2D
 ## 	var theta = 0.5*PI # Angle
 ## 	var x = cos(theta)
 ## 	var y = sin(theta)
-## 	projectile.set_global_transform(Transform2D(theta, Vector2(x * dist, y * dist)) + self.position)
+## 	projectile.set_global_transform(Transform2D(theta, Vector2(x * dist, y * dist) + self.position))
 ## 	projectile.apply_central_impulse(Vector2(x * speed, y * speed))
 ##
 ## To spawn from the player:
@@ -31,7 +31,7 @@ extends RigidBody2D
 ## 	var x = cos(theta)
 ## 	var y = sin(theta)
 ## 	projectile.hostile = false
-## 	projectile.set_global_transform(Transform2D(theta, Vector2(x * dist, y * dist)) + self.position)
+## 	projectile.set_global_transform(Transform2D(theta, Vector2(x * dist, y * dist) + self.position))
 ## 	projectile.apply_central_impulse(Vector2(x * speed, y * speed))
 
 @onready var root = get_tree().root.get_node("Root")
@@ -67,17 +67,17 @@ func set_timeout(seconds : float) -> void:
 	get_node(timer_path).wait_time = seconds
 
 
-func _perimeter_impact() -> void:
+func perimeter_impact() -> void:
 	# Effects
 	self.queue_free()
 
 
-func _player_impact() -> void:
+func player_impact() -> void:
 	# Effects
 	self.queue_free()
 
 
-func _core_impact() -> void:
+func core_impact() -> void:
 	# Effects
 	self.queue_free()
 

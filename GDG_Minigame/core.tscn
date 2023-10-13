@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwlk2cyu2h2fc"]
+[gd_scene load_steps=5 format=3 uid="uid://djtrithum3g3t"]
 
 [ext_resource type="Script" path="res://core.gd" id="1_4gchr"]
-[ext_resource type="PackedScene" uid="uid://cn7sii5gp54fx" path="res://rigid_body_2d.tscn" id="2_1qiew"]
+[ext_resource type="PackedScene" path="res://rigid_body_2d.tscn" id="2_1qiew"]
+[ext_resource type="Texture2D" uid="uid://c6r81cu6jr4yh" path="res://assets/images/SunUnstable.png" id="3_7b6ap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hq1ty"]
 radius = 155.0
@@ -15,5 +16,10 @@ shape = SubResource("CircleShape2D_hq1ty")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-105, -57)
+scale = Vector2(4.27181, 4.1157)
+texture = ExtResource("3_7b6ap")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
