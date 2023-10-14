@@ -8,6 +8,21 @@ Some Notes:
 * **Resolution:** 720p
 * **Aspect Ratio:** 16:9
 
+### Working Items
+This is our current todo list for the mini game.
+
+#### Programmers
+* **First Draft Color Mechanic:** Design the core to have 4 components that each only accept a single projectile type.
+* **Projectiles:** Create 4 different types of projectiles (right now the only difference is their color).
+* **User Interface:** Create a score, core health, and perimeter health visual to allow the player to see how they are doing.
+
+#### Artists
+* **Projectiles (X4):** Create 4 different visuals for projectiles.
+* **Player:** Design the visual for the player character.
+* **Core:** Design a visual and animation for the projectile spawner/core.
+* **Perimeter:** Design a visual for the perimeter that the player is protecting.
+* **Background:** Design the background that is the backdrop for the game's action.
+
 ### Goal
 The goal is for the player to body-block the projectiles shot out from the core (protecting the perimeter) while also shooting back the projectiles into specific quadrants of the core. 
 
