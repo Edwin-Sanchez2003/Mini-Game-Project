@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://comxakpeucmws"]
+
+[ext_resource type="FontFile" uid="uid://duhdummcunsed" path="res://assets/Fonts/defaultFont.ttf" id="1_gkuv8"]
+
+[resource]
+font = ExtResource("1_gkuv8")
+font_size = 45
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0

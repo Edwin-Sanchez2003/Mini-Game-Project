@@ -1,4 +1,5 @@
 extends Sprite2D
+<<<<<<< Updated upstream:GDG_Minigame/Player.gd
 
 const PlayerLaser = preload("res://PlayerLaser.tscn")
 const laserWidth = 200
@@ -29,3 +30,5 @@ func _process(delta):
 		add_child(PlayerLaserIns)
 		time = charge
 		charge = 0
+=======
+>>>>>>> Stashed changes:GDG_Minigame/prefabs/Player.gd

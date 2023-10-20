@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://djtrithum3g3t"]
+
+[ext_resource type="Script" path="res://prefabs/core.gd" id="1_4gchr"]
+[ext_resource type="Texture2D" uid="uid://c6r81cu6jr4yh" path="res://assets/images/SunUnstable.png" id="3_7b6ap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hq1ty"]
+radius = 155.0
+
+[node name="Core" type="Area2D"]
+script = ExtResource("1_4gchr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hq1ty")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-102, -50)
+scale = Vector2(4.27181, 4.1157)
+texture = ExtResource("3_7b6ap")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
