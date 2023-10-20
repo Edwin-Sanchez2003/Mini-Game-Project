@@ -17,5 +17,6 @@ position = Vector2(960, 540)
 position = Vector2(960, 540)
 
 [node name="RotCentre" parent="." instance=ExtResource("4_btpwf")]
+input_type = 1
 
 [connection signal="body_exited" from="Perimeter" to="Core" method="_on_perimeter_body_exited"]

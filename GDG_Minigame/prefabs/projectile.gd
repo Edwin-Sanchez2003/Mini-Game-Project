@@ -1,3 +1,4 @@
+class_name Projectile
 extends RigidBody2D
 
 ## Base prefab for projectiles
@@ -23,7 +24,7 @@ extends RigidBody2D
 ## @onready var root = get_tree().root.get_node("Root")
 ##
 ## func _physics_process(delta):
-## 	var bullet = projectile_pf.instantiate()
+## 	var projectile = projectile_pf.instantiate()
 ## 	root.add_child(projectile)
 ## 	var dist = self.radius # Distance from player
 ## 	var speed = 10 # Speed
@@ -48,6 +49,7 @@ enum Charge {
 	RED,
 	GREEN,
 	BLUE,
+	YELLOW,
 }
 
 
