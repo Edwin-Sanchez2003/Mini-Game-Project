@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds02bndhpkw3a"
-path="res://.godot/imported/Boarder.png-b8797e931f63c00081c154459d7dd14b.ctex"
+path="res://.godot/imported/Boarder.png-79066bdee16de3aaa418b70d0bda6ff0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Boarder.png"
-dest_files=["res://.godot/imported/Boarder.png-b8797e931f63c00081c154459d7dd14b.ctex"]
+source_file="res://assets/images/Boarder.png"
+dest_files=["res://.godot/imported/Boarder.png-79066bdee16de3aaa418b70d0bda6ff0.ctex"]
 
 [params]
 
